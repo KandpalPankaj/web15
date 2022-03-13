@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    const amar={
+        pro:"singer",
+        city:"Goa",
+        borrow(){
+            console.log(`amar profession is ${this.pro}`)
+            console.log(`amar city is ${this.city}`)
+        }
+    }
+    const akbar={
+        pro:"chef",
+        city:"Mumbai",
+        borrow(){
+            console.log(`akbar profession is ${this.pro}`)
+            console.log(`akbar city is ${this.city}`)
+        }
+    }
+    const anthony={
+        pro:"Magician",
+        city:"Kashmir",
+        borrow(){
+            console.log(`anthony profession is ${this.pro}`)
+            console.log(`anthony city is ${this.city}`)
+        }
+    }
+
+amar.borrow.call(anthony);
+akbar.borrow.call(amar);
+anthony.borrow.call(akbar);
+
+</script>

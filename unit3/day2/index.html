@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <h4>Student's Name</h4>
+        <input type="text" placeholder="Enter Name" value="" id="name">
+        <h4>Number</h4>
+        <input type="number" placeholder="Enter Number" value="" id="num">
+        <h4>City</h4>
+        <input type="text" placeholder="City" value="" id="city">
+        <button>Accept</button>
+        <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Number</th>
+                <th>City</th>
+                <hr>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+    </form>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",studentfun);
+    var arr= JSON.parse(localStorage.getItem("arr"))||[];
+    createTable(arr);
+    function studentfun(){
+     event.preventDefault();
+    function student(n,s,c){
+        this.name=n
+        this.number=s
+        this.city=c
+    }
+    var n=document.querySelector("#name").value
+    var s=document.querySelector("#num").value
+    var c=document.querySelector("#city").value
+    var obj= new student(n , s ,c)
+arr.push(obj);
+localStorage.setItem("arr", JSON.stringify(arr));
+createTable(arr);
+}
+function createTable(arr){
+    document.querySelector("tbody").innerHTML = "";
+    arr.map(function (elem) {
+      var tr = document.createElement("tr");
+      var td1 = document.createElement("td");
+      td1.textContent = elem.name;
+      var td2 = document.createElement("td");
+      td2.textContent = elem.number;
+      var td3 = document.createElement("td");
+      td3.textContent = elem.city;
+      tr.append(td1, td2, td3);
+      document.querySelector("tbody").append(tr);
+
+    });
+    
+}
+
+
+
+</script>

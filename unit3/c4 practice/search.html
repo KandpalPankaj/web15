@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+</head>
+<body>
+    <div id="sidebar"></div>
+    <div id="news"></div>
+</body>
+</html>
+
+<script type="module">
+    import {apiCall,apeendNews} from "./main.js";
+    import sidebar from "./sidebar.js"
+   let search=localStorage.getItem("searchNews")
+
+
+
+   let res=await apiCall(`https://shrouded-earth-23381.herokuapp.com/api/search/?q=${search}`)
+   console.log(' res', res);
+   let parent=document.getElementById("news");
+    apeendNews(res,parent)
+
+    let a=document.getElementById("sidebar");
+a.innerHTML=sidebar();
+</script>

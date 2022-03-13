@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Updates</title>
+    <style>
+     
+        #container{
+            display: flex;
+            margin-top: 20px;
+        }
+        iframe{
+            height: 330px;
+            width: 310px;
+border: 1px solid black;
+
+        }
+        input{
+            height: 20px;
+            
+        }
+        #container>div{
+            border: 3px solid black;
+            width: 310px;
+            height: 330px;
+            background-color: rgb(225, 241, 245);
+        }
+        #daily{
+            display: flex;
+            text-align: center;
+            margin-top: 10px;
+        }
+        #daily>div{
+            border:1px solid black;
+            padding: 0 20px;
+            color: white;
+            background-color: rgb(99, 93, 93);
+        }
+        img{
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="city" placeholder="Location">
+
+    <button onclick="getWeatherData()" >Search</button>
+    <div id="container">
+    </div>
+    <div id="daily"></div>
+</body>
+</html>
+<script src="index.js">
+
+</script>

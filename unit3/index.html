@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1></h1>
+    <button onclick="dice()">Throw Dice</button>
+</body>
+</html>
+<script >
+
+    // function dice()
+    // {
+    //     var a= Math.floor(Math.random()*(7-1)+1)
+    //     if(a==6)
+    //     {
+    //         document.querySelector("h1").textContent=a;
+    //         document.querySelector("h1").setAttribute("style","color:green")
+    //     }
+    //     else if(a==1)
+    //     {
+    //         document.querySelector("h1").textContent=a;
+    //         document.querySelector("h1").setAttribute("style","color:yellow")
+
+    //     }
+    //     else
+    //     {
+    //         document.querySelector("h1").textContent=a;
+    //         document.querySelector("h1").setAttribute("style","color:red")
+
+    //     }
+       
+    // }
+function newspaper(h,d){
+    this.timestamp=new Date();
+    this.randomid=Math.round(Math.random()*10);
+    this.day=d;
+    this.name=h
+}
+let n1=new newspaper("hindu","sat")
+let n2= new newspaper("times","fri")
+console.log(n1,n2);
+
+</script>

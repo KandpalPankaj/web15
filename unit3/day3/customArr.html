@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    function myArray(){
+        Object.defineProperty(this,"length",{
+            writable:true,
+            enumerable:false
+        })
+        for(let i=0;i<arguments.length;i++)
+        {
+            this[i]=arguments[i]
+            this.length=arguments.length
+        }
+    }
+    myArray.prototype.jodo=function(x){
+        var index=this.length;
+        this[index]=x;
+        this.length++;
+    }
+    myArray.prototype.first=function(){
+        return this[0]
+    }
+  
+    myArray.prototype.ultakro=function(){
+        function swap(ar,i,j){
+            var temp=ar[i];
+            ar[i]=ar[j];
+            ar[j]=temp;
+        }
+        var left=0;
+        var right=this.length-1;
+        while(left<right)
+        {
+            swap(this,left,right);
+            left++;
+            right--;
+        }
+        
+        
+    }
+    var arr= new myArray("a","b","c","d");
+    arr.jodo("e");
+    console.log(Object.values(arr))
+    arr.ultakro();
+    console.log(Object.values(arr))
+       var z= arr.first();
+    console.log(z)
+    
+</script>

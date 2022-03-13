@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <div id="line1"></div>
+        <div id="line2"></div>
+        <div id="line3"></div>
+        <div id="line4"></div>
+    </ul>
+    <button onclick="objData()">Objects</button>
+    <button onclick="arrData()">Arrays</button>
+    <button onclick="funData()">Function</button>
+    <button onclick="strData()">Strings</button>
+    <button onclick="numData()">Numbers</button>
+    <button onclick="nullData()">null</button>
+    <button onclick="udData()">undefined</button>
+</body>
+</html>
+<script>
+
+function objData()
+{
+    document.querySelector("#line1").innerHTML="<li>The Object class represents one of JavaScript's data types. It is used to store various keyed collections and more complex entities.</li>"
+    document.querySelector("#line2").innerHTML="<li>Nearly all objects in JavaScript are instances of Object; a typical object inherits properties (including methods) from Object.prototype</li>"
+    document.querySelector("#line3").innerHTML="<li>There isn't any method in an Object itself to delete its own properties</li>"
+    document.querySelector("#line4").innerHTML="<li>Object.freeze():Freezes an object. Other code cannot delete or change its properties.</li>"
+}
+function arrData()
+{
+    document.querySelector("#line1").innerHTML="<li>The JavaScript Array class is a global object that is used in the construction of arrays; which are high-level, list-like objects.</li>"
+    document.querySelector("#line2").innerHTML="<li>an array's length can change at any time, and data can be stored at non-contiguous locations in the array.</li>"
+    document.querySelector("#line3").innerHTML="<li>JavaScript arrays are zero-indexed. The first element of an array is at index 0.</li>"
+    document.querySelector("#line4").innerHTML="<li>The last element is at the index value equal to the value of the array's length property minus 1.</li>"
+}
+function funData()
+{
+    document.querySelector("#line1").innerHTML="<li>Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value.</li>"
+    document.querySelector("#line2").innerHTML="<li>A function definition consists of the function keyword, followed by: The name of the function, A list of parameters to the function, enclosed in parentheses and separated by commas, The JavaScript statements that define the function, enclosed in curly brackets.</li>"
+    document.querySelector("#line3").innerHTML="<li>Defining a function does not execute it. Defining it names the function and specifies what to do when the function is called.</li>"
+    document.querySelector("#line4").innerHTML="<li> To use a function, you must define it somewhere in the scope from which you wish to call it.</li>"
+}
+function strData()
+{
+    document.querySelector("#line1").innerHTML="<li>The String object is used to represent and manipulate a sequence of characters.</li>"
+    document.querySelector("#line2").innerHTML="<li>Strings are useful for holding data that can be represented in text form.</li>"
+    document.querySelector("#line3").innerHTML=""
+    document.querySelector("#line4").innerHTML=""
+}
+function numData()
+{
+    document.querySelector("#line1").innerHTML="<li>Number is a primitive wrapper object used to represent and manipulate numbers like 37 or -9.25.</li>"
+    document.querySelector("#line2").innerHTML="<li>The Number constructor contains constants and methods for working with numbers. Values of other types can be converted to numbers using the Number() function.</li>"
+    document.querySelector("#line3").innerHTML="<li>When used as a function, Number(value) converts a string or other value to the Number type. If the value can't be converted, it returns NaN.</li>"
+    document.querySelector("#line4").innerHTML=""
+
+}
+function nullData()
+{
+    document.querySelector("#line1").innerHTML="<li>The value null represents the intentional absence of any object value. </li>"
+    document.querySelector("#line2").innerHTML="<li>It is one of JavaScript's primitive values and is treated as falsy for boolean operations.</li>"
+    document.querySelector("#line3").innerHTML=""
+    document.querySelector("#line4").innerHTML=""
+}
+function udData()
+{
+    document.querySelector("#line1").innerHTML="<li>The global undefined property represents the primitive value undefined.</li>"
+    document.querySelector("#line2").innerHTML="<li>undefined is a property of the global object. That is, it is a variable in global scope.</li>"
+    document.querySelector("#line3").innerHTML="<li>You can use undefined and the strict equality and inequality operators to determine whether a variable has a value.</li>"
+    document.querySelector("#line4").innerHTML=""
+
+}
+</script>

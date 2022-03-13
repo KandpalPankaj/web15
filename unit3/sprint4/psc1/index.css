@@ -1,0 +1,15 @@
+
+#container{
+    display: flex;
+    height: 400px;
+}
+#input-section,#output-section{
+    flex: 1;
+    margin: 5%;
+    border: 1px solid black;
+
+}
+#input-text{
+    width: 99%;
+    height: 91%;
+}

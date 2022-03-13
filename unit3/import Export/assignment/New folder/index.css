@@ -1,0 +1,90 @@
+#navbar{
+    display: flex;
+    justify-content: space-around;
+    color: whitesmoke;
+    font-size: 24px;
+}
+a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+#logo{
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+}
+#input{
+    border: 1px solid black;
+    width: 40%;
+    background-color: white;
+    border-radius: 5px;
+    min-width: 300px;
+
+}
+i{
+    color: black;
+}
+input{
+    border-style: hidden;
+    margin: 10px;
+}
+input:placeholder-shown{
+    font-size: 20px;
+}
+input:focus{
+    outline: none;
+}
+#bigBox>div{
+    display: flex;
+    background-color: whitesmoke;
+}
+.box{
+    background-color: whitesmoke;
+}
+#bigBox>div:hover{
+    background-color: white;
+}
+img{
+    width: 100px;
+    border-radius: 40px;
+    margin: 10px;
+}
+#bigBox{
+    max-height: 600px;
+    min-height: 100px;
+    border-radius: 5px;
+    width: 100%;
+    overflow-y: scroll;
+    
+    margin-top: 20px;
+}
+#box2{
+    margin-top:30px
+}
+#box2>div{
+    font-weight: bold;
+}
+body{
+    background-image: url("https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png") ;
+    
+}
+#container{
+    background-color: whitesmoke;
+    width: 40%;
+    margin-left: 20%;
+    border-radius: 5px;
+    margin-top: 10px;
+    float: left;
+}
+#bigLogo,#Text{
+    color: white;
+    text-align: center;
+}
+#bigLogo{
+    margin-top: 180px;
+    font-size: 70px;
+    font-style: italic;
+}
+#Text{
+    font-size: 50px;
+}
