@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://www.pngitem.com/pimgs/m/81-813666_coschedule-logo-hd-png-download.png" type="image/x-icon">
+
+    <title>CoSchedule Accounts</title>
+</head>
+<style>
+    body{
+        background-color: #c2c2c2;
+        font-family: MuseoSans-500,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+    #container{
+        width: 430px;
+        height:450px;
+        border: 1px solid white;
+        margin:auto;
+        box-shadow: 0 10px 30px 0 rgb(0 0 0 / 30%);
+        padding-left: 30px;
+        margin-top:100px ;
+        background-color: white;
+    }
+    #logo{
+        margin: 50px 100px 0px;
+        width: 50%;
+    }
+    #logo~div{
+        margin: 20px 0px 5px;
+    }
+    #signIn
+    {
+        color: white;
+        background-color: #f48965;
+        border: 0;
+        width: 91%;
+        height: 40px;
+        text-align: center;
+        margin-top: 20px;
+        cursor: pointer;
+        
+    }
+    #container>div:nth-last-child(1){
+        display: flex;
+        width: 80%;
+        margin-left: 30px;
+        margin-top: 60px;
+    }
+    input{
+        width: 85%;
+        height: 40px;
+        padding-left: 20px;
+        font-size: 16px;
+    }
+ 
+    #dash{
+        border-right: 1px solid black;
+        padding-right: 20px;
+        width: 250px;
+        cursor: pointer;
+    }
+    #forget{
+        width: 300px;
+        padding-left: 20px;
+        cursor: pointer;
+    }
+
+</style>
+<body>
+    <form id="container">
+        <img id="logo" src="https://accounts.coschedule.com/img/cos-logo-horz.svg" alt="">
+        <div>EMAIL ADDRESS</div>
+        <input type="text" placeholder="Email Address" id="mail">
+        <div>PASSWORD</div>
+        <input type="password" placeholder="Password" id="pass">
+       
+        <!-- <div id="signIn" type="submit">Sign In</div> -->
+        <input type="submit" value="Sign In" id="signIn">
+        <div id="new">
+            <div id="dash" onclick="need()">Need an account?</div>
+            <div id="forget">Forgot your password?</div>
+        </div>
+    </form>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",signin)
+    var regdUsers=JSON.parse(localStorage.getItem("userDataBase"))
+    //userdatabase is key in signuppage
+    function signin(event){
+        event.preventDefault();
+        var pass=document.querySelector("#pass").value
+        var mail=document.querySelector("#mail").value
+        var bag=""
+        for(var i=0;i<regdUsers.length;i++)
+        {
+        // take data of regdUser from signup page
+            if(regdUsers[i].email==mail && regdUsers[i].password==pass)
+            {  bag="yes";
+            // add home page link
+            };
+        }
+         if(bag=="yes")
+        {
+            alert("Login Successful");
+            window.location.href="calenderhome.html";
+
+        }
+        else{
+            alert("incorrect details")
+        }
+   }
+function need(){
+    window.location.href="signup2.html";
+}
+</script>
