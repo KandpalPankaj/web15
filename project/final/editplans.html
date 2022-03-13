@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="https://www.pngitem.com/pimgs/m/81-813666_coschedule-logo-hd-png-download.png" type="image/x-icon">
+
+        <title>Coschedule</title>
+        <style>
+            body {
+                width: 1350px;
+                height: 590px;
+                background-color: #FFF;
+                font-family: "MuseoSans-300", sans-serif;
+            }
+            #navbar {
+                width: 100%;
+                height: 50px;
+                display: flex;
+                background-color: #e6e6e6;
+                line-height: 50px;
+                
+            }
+            #container1 div {
+                width: 25px;
+                height: 3px;
+                margin: 4px 0 4px 10px;
+                border-radius: 35%;
+                border: 1px solid;
+                background-color: black;
+            }
+            #container1 {
+                margin-top: 12px;
+            }
+            #company {
+                width: 16%;
+                height: 100%;
+                margin-left: 20px;
+            }
+            .head {
+                width: 9%;
+                height: 100%;
+                text-align: center;
+                cursor: pointer;
+            }
+            .head:hover {
+                background-color: whitesmoke;
+            }
+            #container2 {
+                width: 100%;
+                height: 100%;
+                display: flex;
+            }
+            #left {
+                height: 100%;
+                width: 20%;
+                border: 1px solid #f7f7f7;
+                background-color: #f7f7f7;
+
+
+            }
+            #upper {
+                width: 85%;
+                height: 55%;
+                margin-top: 50px;
+                font-size: 14px;
+                text-align: center;
+                margin-left: 7%;
+            }
+            #upper > img {
+                width: 65%;
+                border: 4px solid #f37e5d;
+                border-radius: 50%;
+                margin-bottom: 5px;
+            }
+            #upper>p:nth-child(2) {
+                line-height: 150%;
+            }
+            #upper>p:nth-child(3) {
+                line-height: 0;
+            }
+            #upper>p:nth-child(4) {
+
+                line-height: 150%;
+            }
+            #upper>p:nth-last-child(1) {
+                font-size: 11px;
+                width: 80%;
+                height: 10%;
+                margin-left: 7%;
+            }
+            #upper+img {
+                margin-left: 20%;
+                margin-top: 6%;
+                width: 60%;
+                margin-bottom: 18%;
+            }
+            #upper~div p {
+                width: 70%;
+                font-size: 12px;
+                margin-left: 12%;
+            }
+            span {
+                color: #f37e5d;
+                font-size: 12px;
+                cursor: pointer;
+            }
+            #billing {
+                background-color: white;
+            }
+            #right {
+                width: 80%;
+                display: flex;
+            }
+
+            a {
+                text-decoration: none;
+                font-size: 14px;
+                color: #f37e5d;
+                border-right: 1px solid gray;
+                padding-right: 2%;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            span:hover {
+                text-decoration: underline;
+            }
+            #right > div {
+                width: 50%;
+                height: 100%;
+
+            }
+            #manage {
+                display: flex;
+                margin: 10% 0 10% 18%;
+                Font-size: 24.5px;
+                color: rgb(102, 102, 102);
+                cursor: pointer;
+            }
+            #right>div>div:nth-child(4),
+            #right>div>div:nth-child(5) {
+                display: flex;
+                margin: 7% 10% 7% 20%;
+                justify-content: space-between;
+                border-bottom: 1px solid #d1c9c9;
+                padding-bottom: 4%;
+                font-size: 14px;
+            }
+            #right>div>div:nth-child(2),
+            a,
+            #right>div>div:nth-child(4),
+            #right>div>div:nth-child(5) {
+                margin-left: 20%;
+            }
+            #checkbox,
+            #addons {
+                display: flex;
+                margin-left: 18%;
+                margin-bottom: 2%;
+                font-size: 14px;
+                width: 75%;
+            }
+            #institute {
+                font-weight: bold;
+                margin-left: 4%;
+            }
+            #institute~div {
+                margin-left: 4%;
+                font-size: 12px;
+                margin-right: 4%;
+            }
+            #checkbox {
+                border-bottom: 1px solid #d1c9c9;
+                padding-bottom: 4%;
+            }
+            #checkoutBox {
+                width: 80%;
+                height: 70%;
+                box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
+                margin: 20% 0 0 5%;
+            }
+            #plan {
+                height: 10%;
+                background-color: #f7f7f7;
+                padding-left: 5%;
+                padding-top: 5%;
+            }
+            #right>div>div:nth-child(4),
+            #right>div>div:nth-child(5) {
+                display: flex;
+                margin: 7% 10% 7% 20%;
+                justify-content: space-between;
+                border-bottom: 1px solid #d1c9c9;
+                padding-bottom: 4%;
+                font-size: 14px;
+            }
+            .user {
+                display: flex;
+                margin: 0 5%;
+                justify-content: space-between;
+                padding-bottom: 4%;
+                font-size: 14px;
+
+            }
+            .calender {
+                font-weight: bold;
+            }
+            #calender {
+                margin: 5%;
+
+            }
+            #billin {
+                display: flex;
+                font-size: 14px;
+                height: 10%;
+                padding: 5% 0;
+                width: 90%;
+                margin-left: 2%;
+                border-top: 1px solid #d1c9c9;
+                border-bottom: 1px solid #d1c9c9;
+            }
+            #monthly {
+                margin-left: 5%;
+            }
+            .total {
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 6%;
+            }
+            .price {
+                margin-left: 15%;
+                margin-right: 5%;
+            }
+            #total {
+                font-weight: bold;
+            }
+            #checkout {
+                background-color: #f37e5d;
+                color: white;
+                border: 0;
+                width: 90%;
+                padding: 2% 0;
+                margin: 5%;
+                cursor: pointer;
+            }
+
+            span {
+                content: "\005E";
+                line-height: 0;
+            }
+            .add {
+                justify-content: space-around;
+                display: flex;
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="navbar">
+            <div id="container1">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="company">Masai</div>
+            <div id="compan" class="head">Company</div>
+            <div class="head" id="setting">Settings</div>
+            <div class="head" id="team">Team Members</div>
+            <div class="head" id="social">Social Profiles</div>
+            <div class="head" id="billing">Billing</div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="container2">
+            <div id="left">
+                <div id="upper">
+                    <img src="https://app.coschedule.com/img/testimonials/moria-fredrickson-ccc715aaf1e4f53621b40eb2667df5d6.jpg">
+                    <p>"CoSchedule helps me easily see what’s on each person’s
+                    </p>
+                    <p>plate and shift or</p>
+                    <p>re-prioritize workloads  when necessary."</p>
+                    <p>MORIA FREDRICKSON, CAMPAIGNS + COMMUNICATION</p>
+                </div>
+                <img src="https://app.coschedule.com/img/testimonials/blue-medora-logo-ab5e0efb3cae386b496fa1efc453a731.png" alt="">
+                <div>
+                    <p>To view plan details and compare plans visit our<span>
+                            pricing page.</span>
+                    </p>
+                    <p>Need help deciding? Talk with a<span>
+                            CoSchedule Expert.</span>
+                    </p>
+                </div>
+            </div>
+            <div id="right">
+                <div>
+                    <div id="manage">
+                        <div onclick="myfunction()">Manage Subscription ></div>
+                        <div>Edit Plan</div>
+                    </div>
+                    <div class="calender">Marketing Calender -(Annual)</div>
+                    <a href="">Switch to monthly billing</a>
+                    <div class="add">
+                        <span>
+                            <p class="btn1">&#8896</p>
+                            <h2 class="soc" style="margin:0 0 0 30px ;color: black; ">10 Social Profiles</h2>
+                            <p class="btn2">&#8897</p>
+                        </span>
+                        <p class="inc">included</p>
+                    </div>
+
+                    <div class="add">
+                        <span>
+                            <p class="btn3">&#8896</p>
+                            <h2 class="us" style="margin:0 0 0 30px;color: black;">1 Users</h2>
+                            <p class="btn4">&#8897</p>
+                        </span>
+                        <p class="mon">$29/mo</p>
+                    </div>
+                    <hr>
+
+                    <div id="addons">ADDONS</div>
+                    <div id="checkbox">
+                        <input type="checkbox">
+                        <div>
+                            <div id="institute">Actionable Marketing Institute</div>
+                            <div>Your all-in-one hub for premium, on-demand courses (+ exclusive content NEVER published anywhere else) specifically designed for kick a$$ marketers with little time to spare.</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div id="checkoutBox">
+                        <div id="plan">PLAN SUMMARY</div>
+                        <div>
+                            <div class="calender" id="calender">Marketing Calender -(Annual)</div>
+                            <div class="user">
+                                <div class="one">10 Social Profiles</div>
+                                <div class="two">included</div>
+                            </div>
+                            <div class="user">
+                                <div class="three">1 Users</div>
+                                <div class="four">$29/mo</div>
+                            </div>
+                            <div id="billin">
+                                <form style="display: flex;justify-content: space-around;">
+                                    <input type="radio" id="html" name="same" value="ANNUAL BILLING"/>
+                                    <label for="html">ANNUAL BILLING</label>
+                                    <p class="off" style="color: red;font-size: 10px;margin:0 0 7px 0">Save $120</p>
+                                    <input type="radio" id="htm" name="same" value="MONTHLY BILLING"/>
+                                    <label for="htm" id="htmm">MONTHLY BILLING</label>
+                                </form>
+                            </div>
+                            <div class="total">
+                                <div>Subtotal</div>
+                                <div class="price" id="sub">$348</div>
+                            </div>
+                            <div class="total" id="total">
+                                <div>Total Due Today</div>
+                                <div class="price" id="tot">$348</div>
+                            </div>
+                            <input type="submit" id="checkout" value="Continue to Checkout">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script>
+    document.querySelector("#checkout").addEventListener("click", myfunction7);
+
+    function myfunction7() {
+        window.location.href = "paymentpage.html"
+    }
+    document.querySelector("#billing").addEventListener("click", myfunction);
+
+    function myfunction() {
+        window.location.href = "billing1.html"
+    }
+    document.querySelector("#compan").addEventListener("click", myfunction1);
+
+    function myfunction1() {
+        window.location.href = "company1.html"
+    }
+    document.querySelector("#setting").addEventListener("click", myfunction2);
+
+    function myfunction2() {
+        window.location.href = "setting.html"
+    }
+    document.querySelector("#team").addEventListener("click", myfunction3);
+
+    function myfunction3() {
+        window.location.href = "team.html"
+    }
+    document.querySelector("#social").addEventListener("click", myfunction4);
+
+    function myfunction4() {
+        window.location.href = "social.html"
+    }
+    document.querySelector(".btn1").addEventListener("click", function () {
+        increase();
+    })
+    var count1 = 1;
+    var count2 = 1;
+    var count3 = 1;
+    var count4 = 1;
+    var total1 = 0;
+    var total2 = 0;
+    var total3 = 0;
+    var total4;
+    function increase() {
+        if (count1 >= 1) {
+            total2 = count1 * 15;
+            var final1 = document.querySelector(".inc").textContent = `$${total2}/mo`
+            var tw = document.querySelector(".two").textContent = `$${total2}/mo`
+            document.querySelector(".soc").textContent = `${
+                10 + 5 * count1
+            } Social Profiles`
+            var on = document.querySelector(".one").textContent = `${
+                10 + 5 * count1
+            } Social Profiles`
+            var subtt = total1 * 12 + total2 * 12;
+            var i = document.querySelector("#sub").textContent = `$${subtt}`
+            var j = document.querySelector("#tot").textContent = `$${subtt}`
+        } else {
+            var final1 = document.querySelector(".inc").textContent = "included";
+        } count1++;
+        localStorage.setItem("one", JSON.stringify(on))
+        localStorage.setItem("two", JSON.stringify(tw))
+        localStorage.setItem("ten", JSON.stringify(i))
+        localStorage.setItem("eleven", JSON.stringify(j))
+    }
+    document.querySelector(".btn3").addEventListener("click", function () {
+        incr();
+    })
+    var count2 = 1;
+    function incr() {
+        if (count2 >= 1) {
+            total1 = (count2 + 1) * 29;
+            var final2 = document.querySelector(".mon").textContent = `$${total1}/mo`
+            var e = document.querySelector(".four").textContent = `$${total1}/mo`
+            var f = document.querySelector(".us").textContent = `${
+                count2 + 1
+            } Users`
+            var d = document.querySelector(".three").textContent = `${
+                count2 + 1
+            } Users`
+            var c = document.querySelector(".off").textContent = `Save $${
+                (count2 + 1) * 120
+            }`
+            var subtt = total1 * 12 + total2 * 12;
+            var a = document.querySelector("#sub").textContent = `$${subtt}`
+            var b = document.querySelector("#tot").textContent = `$${subtt}`
+
+        }
+        count2++;
+        localStorage.setItem("three", JSON.stringify(d))
+        localStorage.setItem("four", JSON.stringify(e))
+        localStorage.setItem("five", JSON.stringify(c))
+        localStorage.setItem("twelve", JSON.stringify(a))
+        localStorage.setItem("thirteen", JSON.stringify(b))
+    }
+
+
+    document.querySelector(".btn2").addEventListener("click", function () {
+        decrease();
+    })
+    var count3 = 1;
+    function decrease() {
+
+        total3 = total2 - count3 * 15;
+
+        var final3 = document.querySelector(".inc").textContent = `$${total3}/mo`
+        count3++;
+        count1--;
+        console.log(final3)
+    }
+    document.querySelector(".btn4").addEventListener("click", function () {
+        decr();
+    })
+    var count4 = 1;
+    function decr() {
+        total4 = total1 - count2 * 29;
+
+        var final4 = document.querySelector(".mon").textContent = `$${total4}/mo`
+
+        count4++;
+        count2--;
+        console.log(final4)
+
+    }
+    document.querySelector("#htm").addEventListener("click", function () {
+        monthly();
+    });
+    function monthly() {
+        var subtt = total1 * 12 + total2 * 12;
+        var arr1 = document.querySelector("#sub").textContent = `$${
+            (subtt / 12)
+        }`
+        var arr3 = document.querySelector("#tot").textContent = `$${
+            subtt / 12
+        }`
+        console.log(arr1)
+        localStorage.setItem("six", JSON.stringify(arr1))
+        localStorage.setItem("seven", JSON.stringify(arr3))
+    }
+    document.querySelector("#html").addEventListener("click", function () {
+        yearly();
+    });
+    function yearly() {
+        var subtt = total1 * 12 + total2 * 12;
+        var arr = document.querySelector("#sub").textContent = `$${
+            (subtt)
+        }`
+        var arr2 = document.querySelector("#tot").textContent = `$${subtt}`
+        localStorage.setItem("nine", JSON.stringify(arr))
+        localStorage.setItem("eight", JSON.stringify(arr2))
+    }
+</script>

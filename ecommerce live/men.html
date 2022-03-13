@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men</title>
+    
+    <style>
+        #container{width: 1000px;
+            height: 1000px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(4,1fr);
+            grid-gap: 20px;
+            margin: auto;
+        }
+        #container>div{
+            width: 220px;
+            height: 350px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding: 20px;
+        }
+        .nam{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #container>div div{
+            margin-top: 5px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Men's Wear</h1>
+    <button onclick="window.location.href='cart.html'" >Go to Cart</button>
+    <select name="" id="sort" onchange="handlePriceSort()">
+        <option value="">-Price Sort-</option>
+        <option value="high">High to Low</option>
+        <option value="low">Low to High</option>
+    </select>
+    <select name="" id="filter" onchange="filterbrand()">
+        <option value="">-Select Brand</option>
+        <option value="Nike">Nike</option>
+        <option value="Puma">Puma</option>
+    </select>
+    <div id="container"></div>
+</body>
+</html>
+
+<script>
+ 
+    var mensData=JSON.parse(localStorage.getItem("mensData"))
+        var cartArr=JSON.parse(localStorage.getItem("CartItems"))||[];
+       
+        displayData(mensData);
+
+        function filterbrand(){
+            var selected=document.querySelector("#filter").value;
+            var filteredList=mensData.filter(function(el){
+                return el.brandName==selected;
+            });
+            // console.log(filteredList);
+            displayData(filteredList);
+        }
+        function handlePriceSort(){
+        var selected=document.querySelector("#sort").value;
+        if(selected=="high")
+        {
+            mensData.sort(function(a,b){
+                return Number(b.price)-Number(a.price)
+              
+            })
+        }
+        else if(selected=="low")
+        {
+            mensData.sort(function(a,b){
+                return Number(a.price)-Number(b.price)
+            })
+        }
+        displayData(mensData);
+    }
+
+    function displayData(mensData){
+        document.querySelector("#container").innerHTML="";
+        mensData.map(function(data){
+        var box=document.createElement("div");
+        var image=document.createElement("img");
+        image.setAttribute("src",data.image);
+        var name=document.createElement("div");
+        name.textContent=data.name;
+        name.setAttribute("class","nam");
+        var price=document.createElement("div");
+        price.textContent=data.price;
+        var btn=document.createElement("button");
+        btn.textContent="Add to cart";
+         btn.addEventListener("click",function(){
+            addToCart(data);
+        })
+        
+        box.append(image,name,price,btn)
+        document.querySelector("#container").append(box);
+    });
+}
+     function addToCart(data){
+            cartArr.push(data);
+        localStorage.setItem("CartItems",JSON.stringify(cartArr));
+        alert("added successfully")
+    }
+</script>

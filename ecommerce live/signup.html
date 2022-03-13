@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        #container{
+            width: 300px;
+            height: 400px;
+            border: 1px solid silver;
+            margin: auto;
+            font-family: sans-serif;
+            padding-left: 20px;
+            margin-top: 50px;
+        }
+        input{
+            width: 250px;
+            margin: 10px 0px;
+        }
+        #sign{
+            width: 255px;
+            height: 30px;
+            background-color: #f3cb69 ;
+            border-color:#f3cb69 ;
+        }
+        #container div{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <h1>Create Account</h1>
+    <form>
+        <div>Email</div>
+        <input id="email" type="text" placeholder="Enter Email Address"/>
+        <br>
+        <div>Password</div>
+        <input id="pass" type="password" placeholder="Enter Password"/>
+        <br>
+        <div>Username</div>
+        <input id="user" type="text" placeholder="Enter Username"/>
+        <br>
+        <div>Mobile number</div>
+        <input id="mbl" type="number" placeholder="Enter Mobile Number"/>
+        <br>
+        <input id="sign" type="submit" value="Sign up"/>
+    </form>
+</div>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",formSubmit)
+    var userStack=JSON.parse(localStorage.getItem("userDataBase"))||[];
+
+    function formSubmit(event){
+        event.preventDefault();
+        var email=document.querySelector("#email").value
+        var pass=document.querySelector("#pass").value
+        var user=document.querySelector("#user").value
+        var mbl=document.querySelector("#mbl").value
+         
+        var userData={
+            emailAdd:email,
+            password:pass,
+            username:user,
+            mblNum:mbl
+        };
+        userStack.push(userData); 
+        localStorage.setItem("userDataBase",JSON.stringify(userStack));
+        alert("Signup Successful");
+       
+        window.location.href="login.html";
+ }
+</script>

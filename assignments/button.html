@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>button</title>
+    <style>
+     
+        button{
+            padding: 10px;
+            margin:10px;
+            color: white;
+            border: 0;
+            font-weight: bold;
+          
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var buttons = [
+           { name:"Primary",bgColor:"blue"},
+           { name:"Secondary",bgColor:"grey"},
+           { name:"Success",bgColor:"green"},
+            {name:"Danger",bgColor:"red"},
+           { name:"Warning",bgColor:"yellow"},
+            {name:"Info",bgColor:"cyan"}
+        
+    ];
+buttons.map(function (ele) {
+    var bton=document.createElement("button");
+    bton.textContent=ele.name;
+    bton.style.backgroundColor=ele.bgColor;
+    document.querySelector("body").append(bton);
+});
+</script>

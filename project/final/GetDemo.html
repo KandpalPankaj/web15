@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://www.pngitem.com/pimgs/m/81-813666_coschedule-logo-hd-png-download.png" type="image/x-icon">
+
+    <title>CoSchedule Demo</title>
+    <style>
+        body {
+    background-color:rgb(251,252,253) ;
+    font-family: "MuseoSans-300",sans-serif;
+}
+#box1 {
+    width: 150px;
+    height: 50px;
+    margin: auto;
+    margin-top: 30px;
+}
+#heading1 {
+    text-align: center;
+    font-size: 38px;
+    color: rgb(75,75,75);
+}
+#p1 {
+    text-align: center;
+    margin-top: -22px;
+    font-size: 16px;
+    color: rgb(75,75,75);
+
+}
+#box2 {
+    margin: auto;
+    margin-top: 50px;
+    width: 550px;
+    height: 550px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 2px 20px 0 rgb(0 0 0 / 10%);
+    border-radius: 10px;
+    background: #fff;
+}
+#box2p1 {
+     margin-top: 45px;
+     margin-left: 50px;
+     font-size: 12px;
+    color: rgb(75,75,75);
+
+}
+#p1input {
+    width: 80%;
+    height: 40px;
+    margin-left: 50px;
+    margin-top: -8px;
+    border-radius: 2px;
+    border: 1px solid #d8d8d8;
+    font-size: 15px;
+
+}
+#box2p2 {
+    
+     margin-left: 50px;
+     font-size: 12px;
+    color: rgb(75,75,75);
+
+}
+#p2input {
+    width: 80%;
+    height: 40px;
+    margin-left: 50px;
+    margin-top: -8px;
+    border-radius: 2px;
+    border: 1px solid #d8d8d8;
+    font-size: 15px;
+}
+#box2p3 {
+    
+    margin-left: 50px;
+    font-size: 12px;
+    color: rgb(75,75,75);
+
+}
+#p3input {
+   width: 80%;
+   height: 40px;
+   margin-left: 50px;
+   margin-top: -8px;
+   border-radius: 2px;
+    border: 1px solid #d8d8d8;
+    font-size: 15px;
+}
+#box2p4 {
+    
+    margin-left: 50px;
+    font-size: 12px;
+    color: rgb(75,75,75);
+
+}
+#p4input {
+   width: 80%;
+   height: 40px;
+   margin-left: 50px;
+   margin-top: -8px;
+   border-radius: 2px;
+   border: 1px solid #d8d8d8;
+   font-size: 15px;
+}
+#button {
+   
+   width: 180px;
+   height: 40px;
+   background-color: rgb(242,113,76);
+   border: none;
+   border-radius: 2px;
+   color: white;
+   font-size: 20px;
+   margin-left: 315px;
+
+
+}
+#box2p5 {
+margin-left:50px ;  
+font-size: 12px;
+line-height: 150%;
+color: #a4a4a4;
+padding: 15px 0;
+clear: both;
+}
+#last {
+color: #a4a4a4;
+font-size: 12px;
+text-align: center;
+margin-top: 100px;
+}
+    </style>
+</head>
+<body>
+    <div id="box1">
+        <img src="https://coschedule.com/img/cos-logo-full-color.svg" alt="">
+    </div>
+    <h1 id="heading1"> See CoSchedule In Action </h1>
+    <p id="p1"> See how you can organize everything in one place with CoSchedule.</p>
+
+    <div id="box2">
+        <form>
+            <p id="box2p1">Full Name</p>
+            <input id="p1input" type="text" placeholder="Full name">
+            <p id="box2p2">Email Address</p>
+            <input id="p2input" type="email" placeholder="Work email address">
+            <p id="box2p3">Compony</p>
+            <input id="p3input" type="text" placeholder="Company Name">
+            <p id="box2p4">Website URL</p>
+            <input id="p4input" type="text" placeholder="Company website URL">
+            <br/>
+            <br/>
+            <input id="button" type="submit" value = "Next"> </input>
+        </form>
+      
+       <p id="box2p5">By signing up, you agree to CoSchedule’s <u>terms of service, end user agreement,<br/> and privacy policy</u>; you are 16 years or older; and you will receive information <br/> from CoSchedule from which you can opt out at any time.</p>
+    </div>
+    <p id="last">© Copyright 2022, all rights reserved. See our Terms & Policies.</p>
+</body>
+</html>
+
+<script>
+      document.querySelector("form").addEventListener("submit", formSubmit);
+           var userStack=[]
+         function formSubmit(event)  {
+          event.preventDefault();
+
+    var name = document.querySelector("#p1input").value;
+    var email = document.querySelector("#p2input").value;
+    var Company = document.querySelector("#p3input").value;
+    var url = document.querySelector("#p4input").value
+
+    var userData = {
+        nameAdd: name,
+        emailAdd: email,
+        companyAdd: Company,
+        website:url,
+    };
+     userStack.push(userData);
+     localStorage.setItem("userDataBase", JSON.stringify(userStack));
+     window.location.href = "signup.html";
+}
+</script>

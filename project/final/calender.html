@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e77001a753.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="https://www.pngitem.com/pimgs/m/81-813666_coschedule-logo-hd-png-download.png" type="image/x-icon">
+
+    <title>Marketing Calendar - CoSchedule</title>
+    <style>
+        .cal {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: repeat(1, 50px) repeat(5, 150px);
+            /* border: 1px solid red; */
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+        }
+
+        .cal div {
+            border: 1px solid rgba(211, 211, 211, 0.347);
+            color:rgb(136,151,168);
+            font-size: 15px;
+            font-weight: bolder;
+            
+        }
+
+        
+
+        .cal .day{
+            color: rgb(182,178,169);
+            color: black;
+            text-align: left;
+            padding-top: 15px;
+        }
+
+        #nav{
+            /* border: 1px solid red; */
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            background-color: rgb(247,247,247);
+            border-radius: 5px 5px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px 0px inset;
+        }
+
+        #nav>div:nth-child(1){
+            width: 56%;
+            /* border: 1px solid blue; */
+            text-align: right;
+            font-size: 20px;
+            margin-right: 2%;
+            color: black;
+          
+        }
+        #nav>div:nth-child(2){
+            width: 2%;
+            /* border: 1px solid teal; */
+            text-align: right;
+        }
+        #nav>div:nth-child(3){
+            width: 30%;
+            /* border: 1px solid green; */
+            text-align: right;
+        }
+        #nav>div:nth-child(4){
+            width: 5%;
+            /* border: 1px solid grey; */
+            text-align: left;
+            background-color: rgb(207,117,94);
+            color: white;
+            height: 20px;
+            border-radius: 5px;
+            padding: 8px;
+            margin-left: 20px;
+        }
+        #nav>div:nth-child(5){
+            width: 5%;
+            border: 1px solid lightgray;
+            text-align: left;
+            background-color: rgb(247,247,247);
+            color:  rgb(182,178,169);
+            height: 20px;
+            border-radius: 5px;
+            padding: 8px;
+            margin-left: 20px;
+        }
+        
+        #top{
+            display: flex;
+        }
+
+        #top .left{
+            display: flex;
+            width: 50%;
+            /* border: 1px solid red; */
+            justify-content: left;
+            
+        }
+        #top .right{
+            display: flex;
+            width: 50%;
+            /* border: 1px solid blue; */
+            justify-content: right;
+        }
+
+
+        .left div{
+            margin-right: 3%;
+            
+        }
+
+        .left h2{
+            margin-top: -2%;
+        }
+
+        .right div{
+            margin-right: 3%;
+            
+        }
+
+        .right h2{
+            margin-top: -2%;
+        }
+
+        #top div{
+            cursor: pointer;
+        }
+        #nav div{
+            cursor: pointer;
+
+        }
+
+        .left div:hover{
+            color: teal;
+        }
+        .right div:hover{
+            color: teal;
+        }
+        #nav div:hover{
+            color: teal;
+        }
+       
+    </style>
+</head>
+
+
+<body>
+
+    <div id="top">
+        <div class="left">
+            <div onclick="window.location.href=''"><i class="fas fa-bars"></i></div>
+            <div onclick="window.location.href=''"><i class="far fa-calendar-check"></i></div>
+            <div onclick="window.location.href=''"><h2>Calender / All</h2></div>
+            <div onclick="window.location.href=''"><i class="fas fa-chevron-circle-down"></i></div>
+            <div onclick="window.location.href=''"><i class="fas fa-filter"></i></div>
+            <div onclick="window.location.href=''"><i class="fas fa-desktop"></i></div>
+            <div onclick="window.location.href=''"><i class="fas fa-share-square"></i></div>
+            <div onclick="window.location.href=''"><i class="fas fa-ellipsis-v"></i></div>
+        </div>
+
+        <div class="right">
+            <div onclick="window.location.href=''"><i class="fas fa-trophy"></i></div>
+            <div onclick="window.location.href=''"><i class="fas fa-question"></i></div>
+            <div onclick="window.location.href=''"><i class="fas fa-bell"></i></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div id="nav">
+        <div onclick="window.location.href=''"><i class="fas fa-angle-left"></i> JAN 1 - JAN 31 , 2022 <i class="fas fa-angle-right"></i></div>
+        <div onclick="window.location.href=''">Today</div>
+        <div onclick="window.location.href=''"><i class="fas fa-search"></i></div>
+        <div onclick="window.location.href=''"><i class="far fa-plus-square"></i> Create </div>
+        <div onclick="window.location.href=''"><i class="far fa-lightbulb"></i> Ideas <i class="fas fa-angle-right"></i></div>
+       
+    </div>
+    <div class="cal">
+        <div class="day">MONDAY</div>
+        <div class="day">TUESDAY</div>
+        <div class="day">WEDNESDAY</div>
+        <div class="day">THURSDAY</div>
+        <div class="day">FRIDAY</div>
+        <div class="day">SATURDAY</div>
+        <div class="day">SUNDAY</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+        <div>17</div>
+        <div>18</div>
+        <div>19</div>
+        <div>20</div>
+        <div>21</div>
+        <div>22</div>
+        <div>23</div>
+        <div>24</div>
+        <div>25</div>
+        <div>26</div>
+        <div>27</div>
+        <div>28</div>
+        <div>29</div>
+        <div>30</div>
+        <div>31</div>
+       
+    </div>
+
+</body>
+
+</html>

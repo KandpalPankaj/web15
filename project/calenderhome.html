@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://www.pngitem.com/pimgs/m/81-813666_coschedule-logo-hd-png-download.png" type="image/x-icon">
+
+    <title>Document</title>
+    <style>
+    body {
+    font-family: "MuseoSans-300",sans-serif;
+    background-color: rgb(247,247,247);
+
+    }
+    #navbar {
+        width: 100%;
+        height: 60px;
+    
+        display: flex;
+        background-color: rgb(247,247,247);
+    }    
+    #img1 {
+        width: 30px;
+        height: 30px;
+        margin-top: 15px;
+        border-radius: 75%;
+        margin-left: 10px;
+    }
+    #Name {
+        margin-left: 50px;
+        margin-top: -30px;
+        font-size: 20px;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        color: rgb(75,75,75);
+        font-weight: bold;
+        
+    }
+    #Container {
+        display: flex;
+    
+    }    
+    #Left {
+        width: 230px;
+        height: 700px;
+    
+        background-color: rgb(247,247,247);
+
+        
+    }
+    #Middle {
+    
+        width: 900px;
+        height: 1500px;
+        background-color: rgb(247,247,247);
+}
+    
+    #Right {
+       width: 370px;
+       height: 700px;
+     color:   rgb(255,255,255);
+     border-radius: 8px;
+     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 25%);
+        color: #4d4d4d;
+
+
+    }
+    #Box1 {
+        margin-top: 2px;
+        width: 850px;
+        height: 300px;
+        margin-top: 10px;
+        margin-left: 22px;
+        border-radius: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 25%);
+        color: #4d4d4d;
+    
+
+    }
+    #Box2 {
+        margin-top: 15px;
+        width: 850px;
+        height: 300px;
+        margin-left: 22px;
+        border-radius: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 25%);
+        color: #4d4d4d;
+
+    }
+    #Box3 {
+        margin-top: 15px;
+        width: 850px;
+        height: 800px;
+        margin-left: 22px;
+        border-radius: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 25%);
+        color: #4d4d4d;
+
+    }
+    #Trophy  {
+        width: 40px;
+        height: 40px;
+        margin-left: 12px;
+    }
+    #Getting {
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        margin-left: 55px;
+        margin-top: -35px;
+        color: rgb(75,75,75);
+
+    }
+    #successful {
+        margin-left: 20px;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        color: rgb(75,75,75);
+        
+    }
+    #Box1in {
+        width: 78%;
+        height: 200px;
+        margin-left: 20px;
+        margin-top: -140px;
+        display: grid;
+        grid-template-columns: repeat(2,320px);
+        grid-template-rows: repeat(2,85px);
+        gap: 15px;
+        padding-top: 10px;
+      
+        
+    }
+  
+    #logo1 {
+        width: 80px;
+        height: 70px;  
+    }
+    #boxh3 {
+         font-family: MuseoSans-700,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        margin: 15px 0;
+    }
+
+
+    #img2 {
+        width: 120px;
+        height: 120px;
+        margin-left: 700px;
+        margin-top: 20px;
+        
+    }
+    #setup {
+        margin-left: 715px;
+        margin-top: -50px;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        color: rgb(75,75,75);
+    }
+    #img3 {
+        width: 30px;
+        height: 30px;
+        margin-left: 5px;
+        margin-top: 25px;
+
+        
+    }
+    #home {
+        width: 50px;
+        height: 80px;
+        
+    }
+   #img4 {
+       width: 100px;
+       height: 35px;
+       margin-left: 75px;
+       margin-top: 15px;
+   }
+   #img5 {
+       width: 80px;
+       height: 60px;
+       margin-left: 1070px;
+   }
+   #p1tag {
+       font-size: 12px;
+       font-weight: bold;
+       margin-left: 10px;
+   }
+   #p2tag {
+       font-size: 12px;
+       color: rgb(75,75,75);
+       margin-left: 10px;
+       margin-top: -8px;
+
+   }
+   #point1 {
+      display: flex;
+      border-radius: 5px;
+        border: 1px solid #e6e6e6;
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 25%);
+
+   }
+   #point2 {
+       display: flex;
+       border-radius: 5px;
+        border: 1px solid #e6e6e6;
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 25%);
+
+   }
+   #point3 {
+       display: flex;
+       border-radius: 5px;
+        border: 1px solid #e6e6e6;
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 25%);
+
+   }
+   #point4 {
+       display: flex;
+       border-radius: 5px;
+        border: 1px solid #e6e6e6;
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 25%);
+
+   }
+   #point1in {
+       width: 240px;
+   }
+   #logo2 {
+      width: 20px;
+      margin-top: 27px;
+      margin-left: 4px;
+   }
+   #one {
+            width: 50px;
+            height: 40px;
+            background-color: rgb(138,200,132);
+            color: white;
+            text-align: center;
+            padding-top: 15px;
+            border-radius: 70%;
+            margin-top: 10px;
+        }
+        #two {
+            width: 50px;
+            height: 50px;
+            background-color:#daa1a0;
+            color: white;
+            padding-top: 4px;
+            text-align: center;
+            border-radius: 70%;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        #three {
+            width: 50px;
+            height: 50px;
+            background-color:#daa1a0;
+            color: white;
+            padding-top: 4px;
+            text-align: center;
+            border-radius: 70%;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        #left1 {
+            width: 200px;
+            height: 130px;
+            margin-top: 10px;
+            margin-left: 13px;
+            border-radius: 8px;
+            background-color: rgb(42,69,100);
+            color: white;
+        }
+        #symbol {
+           width: 24px;
+           height: 40px;
+          font-size: 20px;
+          margin-left: 20px;
+           padding-top: 10px;
+          
+        }
+        #left2 {
+           margin-left: 48px;
+           margin-top: -35px;
+           font-weight: bold;
+
+        }
+      
+        #imgsize {
+            width: 70px;
+            height: 70px;
+            margin-left: 15px;
+            margin-top: 5px;
+        }
+        #lefttag {
+          font-size: 13px;
+          margin-left: 10px;   
+          display: flex;
+          line-height: 17px;
+          margin-top: -10px;
+        }
+        #homebutton {
+            width: 200px;
+            height: 40px;
+            background-color: rgb(209,119,96);
+            margin-top: 20px;
+            margin-left: 15px;
+            color:white;
+            border-radius: 8px;
+        }
+        #homename {
+            text-align: center;
+            padding-top: 10px;
+            font-family: "MuseoSans-300",sans-serif;      
+        }
+      #calender {
+          font-size: 16px;
+          margin-top: 20px;
+          text-align: center;          
+      }
+      #a1tag {
+          text-decoration: none;
+          color: rgb(102,102,102);
+      }
+      #box2h2 {
+          text-align: center;
+          font-size: 27px;
+          padding-top: 15px;
+          font-family: MuseoSans-500,"Helvetica Neue",Helvetica,Arial,sans-serif;
+          color: rgb(102,102,102);
+      }
+      #box2p1 {
+          text-align: center;
+          color: rgb(102,102,102);
+          font-family: MuseoSans-500,"Helvetica Neue",Helvetica,Arial,sans-serif;
+      }
+      #box2a2 {
+          text-decoration: none;
+          color: red;
+      }
+      #box2img {
+          width: 90%;
+          margin-left: 50px;
+          margin-top: 10px;
+      }
+      #box31 {
+          width: 95%;
+          height: 50px;
+          border-bottom: 1px solid #e6e6e6;
+          display: flex;
+          margin-left: 20px;
+      }
+      #button1 {
+        width: 120px;
+        height: 40px;
+        border: none;
+        margin-top: 5px;
+        margin-left: 530px;
+        background-color: rgb(205,115,91);
+        border-radius: 8px;
+        color: white;
+    
+      }
+      #box3name {
+          width:400px;
+          text-align: center;
+          margin-left: 10px;
+      }
+      #box3p1 {
+          font-size: 20px;
+          margin-top: 50px;
+          margin-left: 10px;
+          font-family: MuseoSans-500,"Helvetica Neue",Helvetica,Arial,sans-serif;
+          
+      }
+      #box3hr {
+          display: flex;
+      }
+      #line {
+          width: 90%;
+          height: 1%;
+          margin-top: 60px;
+          color:#e6e6e6;
+      }
+      #rightnav {
+          width: 100%;
+          height: 60px;
+          display: flex;
+          gap: 10px;
+          border-bottom: 1px solid #e6e6e6;
+
+      }
+      #nav1 {
+          width: 30%;
+          height: 40px;
+          margin-top: 20px;
+          
+      }
+      #nav2 {
+          width: 30%;
+          height: 40px;
+          margin-top: 20px;
+          margin-left: 20px;
+          
+      }
+      #nav3 {
+          width: 30%;
+          height: 40px;
+          margin-top: 20px;
+          margin-left: 10px;
+    
+      }
+    
+      a {
+          text-decoration: none;
+          margin-left: 15px;
+          margin-top: 20px;
+          color: rgb(212,122,72);
+      }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+      <div >
+          <img id="img1" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQhDd1P1q5gAJ_bzWpTU45PSMzCZ1Kb8TbxlLht5ItR1S1mOt58" alt="">
+           <p id="Name">User</p>
+          
+      </div>
+      <div >
+        <img id="img3" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRHCIndGK8wjKd0nuM3CyocQtqNhioqHUZPwQMjfCu5y8Si_Pm-" alt="">
+      </div>
+      <div>
+        <img id="img4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDkV3znaOna8K_pKPwt5Z3yquFMR3ufejQPS0XrWFfSR48KJ2j" alt="">
+       </div>
+       <div>
+           <img id="img5" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRo1Utulu35rUZOF2JOfJuHP0bgbYWApFs53wsqrv-lQ2-jr0Je" alt="">
+       </div>
+
+      
+    </div>
+    <div id="Container">
+        <div id="Left">
+            <div id="left1"> 
+                <div id="symbol">
+                    <span >🏆</span>
+                </div>
+                <p id="left2">Getting Started</p>
+                <div id="lefttag"> 
+                    <p >You have 3 <br/> milestones left to <br/> complete.</p>
+                    <img id="imgsize" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQVMDrsVzcZ3xTvwTjFNqnN0yHbJHcwOpccD76gJbS6O4BBTVx_" alt="">
+                </div>
+               
+            </div>
+
+            <div id="homebutton">
+                <p id="homename"> Home</p>
+            </div>
+             <div id="calender">
+            <a id="a1tag" href="calender.html">Calender</a>
+               
+             </div>
+             <div id="calender">
+                <a id="a1tag" href="">ReQueue</a>
+                   
+                 </div>
+                 <div id="calender">
+                    <a id="a1tag" href="billing2.html">Upgrade Now</a>
+                       
+                     </div>
+        </div>
+    
+    
+    
+        <div id="Middle">
+
+         <div id="Box1">
+             <img id="Trophy" src="https://previews.123rf.com/images/s4rt4/s4rt42008/s4rt4200800014/153257946-luxury-gold-trophy-symbol-logo-illustration-vector-template.jpg" alt="">
+             <h3 id="Getting">Getting Started</h3>
+             <p id="successful">Successful marketers complete these milestones within their first 30 days.</p>
+          
+             <div >
+                <img id="img2" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQVMDrsVzcZ3xTvwTjFNqnN0yHbJHcwOpccD76gJbS6O4BBTVx_" alt="">
+             
+             </div>
+           
+            
+          
+             <div id="Box1in">
+                <div id="point1" >
+                    
+                    <div id="one">
+                        <span>&#10003;</span>
+                    </div>
+                  
+                    <div id="point1in">
+                    <p id="p1tag">View The Getting Started Guide:</p>
+                        <p id="p2tag">Get tips & best practices to organize all
+                            your marketing on your new calendar.</p>
+                    </div>
+                    <div id="logo2"> 
+                        <span>&#62;</span>
+                    </div>
+                </div>
+                <div id="point2">
+                    <div id="two">
+                        <p>0/1</p>
+                    </div>
+                    <div id="point1in">
+                        <p id="p1tag">Schedule A Project 7+ Days In Advance</p>
+                            <p id="p2tag">Add content to your calendar a week in
+                                advance to see all of your upcoming
+                                work</p>
+                        </div>
+                        <div id="logo2"> 
+                            <span>&#62;</span>
+                        </div>
+                </div>
+                <div id="point3" >
+                    <div id="three">
+                        <p>0/3</p>
+                    </div>
+                    <div id="point1in">
+                        <p id="p1tag">Add 3 Unique Project Types To Your
+                            Calendar</p>
+                            <p id="p2tag">Transition all in-progress work to your
+                                calendar-emails, blog posts, events, &
+                                more!
+                                </p>
+                        </div>
+                        <div id="logo2"> 
+                            <span>&#62;</span>
+                        </div>
+                </div>
+                <div id="point4">
+                    <div id="two">
+                        <p>0/1</p>
+                    </div>
+                    <div id="point1in">
+                        <p id="p1tag">Connect 1Or More Intearations</p>
+                            <p id="p2tag">Sync content from your favorite tools like
+                                WordPress, Mailchimp, social, & more
+                                </p>
+                        </div>
+                        <div id="logo2"> 
+                            <span>&#62;</span>
+                        </div>
+                </div>
+             </div>
+             <p id="setup">Setup Progress</p>
+         </div>
+
+         <div id="Box2">
+             <h2 id="box2h2">Quickly import projects to your calendar</h2>
+             <p id="box2p1">Click on the tool you currently use to manage your projects or <a id="box2a2" href="">Download our CSV template.</a><br/>
+                The Bulk Project Import tool is also available via the Create menu.</p>
+                <div>
+                    <img id="box2img" src="Screenshot (32).png" alt="">
+                </div>
+         </div>
+         <div id="Box3">
+             <div id="boxh3">
+               <div id="box31">
+                   <div id="box3name">
+                       <h3>&#10004; My Upcoming</h3>
+                     
+                   </div>
+                   <div id="box3button">
+                    <button id="button1" type="submit"> New Task</button>
+                   </div>
+               </div>
+                <div id="box3hr">
+               <p id="box3p1">Today </p>
+               <hr id="line">
+                  
+                </div>
+                <div id="box3hr">
+                    <p id="box3p1">TOMORROW </p>
+                    <hr id="line">
+                       
+                     </div>
+                     <div id="box3hr">
+                        <p id="box3p1">MONDAY </p>
+                        <hr id="line">
+                           
+                         </div>
+                         <div id="box3hr">
+                            <p id="box3p1">TUESDAY </p>
+                            <hr id="line">
+                               
+                             </div>
+                             <div id="box3hr">
+                                <p id="box3p1">WEDNESDAY </p>
+                                <hr id="line">
+                                   
+                                 </div>
+                                 <div id="box3hr">
+                                    <p id="box3p1">THURSDAY </p>
+                                    <hr id="line">
+                                       
+                                     </div>
+                                     <div id="box3hr">
+                                        <p id="box3p1">FRIDAY </p>
+                                        <hr id="line">
+                                           
+                                         </div>
+             </div>
+         
+         </div>
+
+
+     </div>
+    
+    
+    
+     <div id="Right">
+         <div id="rightnav">
+             <div id="nav1">
+                 <a href="">Notification</a>
+             </div>
+             <div id="nav2">
+                 <a href="">Recent</a>
+             </div>
+             <div id="nav3">
+                 <a href="">Favorite</a>
+             </div>
+         </div>
+         <img src="Screenshot (33).png" alt="">
+     </div>
+    </div>
+   
+</body>
+</html>

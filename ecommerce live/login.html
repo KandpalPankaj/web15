@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+         #container{
+            width: 300px;
+            height: 300px;
+            border: 1px solid silver;
+            margin: auto;
+            font-family: sans-serif;
+            padding-left: 20px;
+            margin-top: 50px;
+        }
+        input{
+            width: 250px;
+            margin: 10px 0px;
+        }
+        #login{
+            width: 255px;
+            height: 30px;
+            background-color: #f3cb69 ;
+            border-color:#f3cb69 ;
+        }
+        #container div{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <h1>Sign-In</h1>
+    <form>
+        <div>Username</div>
+        <input id="user" type="text" placeholder="Enter Username" value=""/>
+        <div>Password</div>
+        <input id="pass" type="password" placeholder="Enter Password" value=""/>
+        <input id="login" type="submit" value="Login"/>
+
+    </form>
+</div>
+</body>
+</html>
+
+<script>
+  document.querySelector("form").addEventListener("submit",signin)
+    var regdUsers=JSON.parse(localStorage.getItem("userDataBase"))
+    //userdatabase is key in signuppage
+    function signin(event){
+        event.preventDefault();
+        var pass=document.querySelector("#pass").value
+        var user=document.querySelector("#user").value
+        var bag=""
+        for(var i=0;i<regdUsers.length;i++)
+        {
+        
+            if(regdUsers[i].username==user && regdUsers[i].password==pass)
+            {  bag="yes";
+            console.log(bag)
+             }
+           
+        }
+         if(bag=="yes")
+        {
+            alert("Login Successful");
+            window.location.href="ecommercesignout.html";
+
+        }
+        else{
+            alert("incorrect details");
+            
+        }
+   }
+  
+</script>

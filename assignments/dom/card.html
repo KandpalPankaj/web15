@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        body>div{
+            width: 400px;
+            height: 200px;
+            display: flex;
+            margin: auto;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+            
+        }
+        body>div>div+div{
+            width: 100%;
+            margin: 0px 18px;
+            font-family: sans-serif;
+            
+        }
+        button{
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            border-color: #007bff ;
+        }
+        p{
+            color: #9b98b1;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" >
+        <!-- <div >
+            <img  src="https://th.bing.com/th/id/OIP.S171c9HYsokHyCPs9brbPwHaGP?pid=ImgDet&rs=1">
+        </div>
+        <div>
+            <h3>Alice Liddel</h3>
+            <p>Alice is a freelance web designer and developer based in London. She is specialized in HTML5,CSS3, JavaScript, Bootstrap, etc. </p>
+            <button>View Profile</button>
+        </div> -->
+    </div>
+</body>
+</html>
+
+<script>
+    var box=document.createElement("div");
+    var img=document.createElement("div");
+    var image=document.createElement("img");
+    image.setAttribute("src","https://th.bing.com/th/id/OIP.S171c9HYsokHyCPs9brbPwHaGP?pid=ImgDet&rs=1");
+    var text=document.createElement("div");
+    var head=document.createElement("h3");
+    head.textContent="Alice Liddel";
+    var para=document.createElement("p");
+    para.textContent="Alice is a freelance web designer and developer based in London. She is specialized in HTML5,CSS3, JavaScript, Bootstrap, etc.";
+    var btn = document.createElement("button");
+    btn.textContent="View Profile";
+
+    img.append(image);
+    text.append(head,para,btn);
+    document.querySelector("#container").append(img,text)
+
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select  id="gender">
+        <option value="">Select an option</option>
+        <option value="male">M</option>
+        <option value="female">F</option>
+    </select>
+    <input type="number" placeholder="Enter year of birth" value=""/>
+    <button onclick="check()">Check</button>
+</body>
+</html>
+
+<script>
+    function check(){
+        // for man year should be less than 1996 and for woman year should be less than 2001 for leagal age. 
+        if(document.querySelector("#gender").value=="male"  && document.querySelector("input").value<="1995" )
+        {
+             alert("the user is of the valid legal age to get married")
+        }
+        else if(document.querySelector("#gender").value=="male"  && document.querySelector("input").value>"1995" )
+        {
+             alert("the user is of the invalid legal age to get married")
+        }
+        else if(document.querySelector("#gender").value=="female"  && document.querySelector("input").value<="2000" )
+        {
+             alert("the user is of the valid legal age to get married")
+        }
+        else if(document.querySelector("#gender").value=="female"  && document.querySelector("input").value>"2000" )
+        {
+             alert("the user is of the invalid legal age to get married")
+        }
+    }
+</script>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout_2</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        body>div{
+            background-color: white;
+            width: 1200px;
+            height: 500px;
+            margin: auto;
+            margin-top: 300px;
+            padding: 20px;
+            font-family: sans-serif;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(12,1fr);
+            grid-template-rows: repeat(7,1fr);
+            grid-template-areas: "n n n n n n n n n n n n"
+                                "a a a a a a a a a b b b"
+                                "a a a a a a a a a b b b"
+                                "a a a a a a a a a c c c"
+                                "a a a a a a a a a c c c"
+                                "a a a a a a a a a d d d"
+                                "a a a a a a a a a d d d"
+        }
+        .box{
+            font-size: 24px;
+            padding: 20px;
+            color: #5a595a;
+        }
+        #navigation{
+            grid-area: n;
+            background-color: yellow;
+            font-size: 40px;
+            padding: 20px
+        }
+        #b{
+            grid-area: b;
+            background-color: #00ff2a;
+
+        }
+        #c{
+            grid-area: c;
+            background-color: #00ff2a;
+        }
+        #d{
+            grid-area: d;
+            background-color: #00ff2a;
+        }
+        #a{
+            grid-area: a;
+            background-color: red;
+            margin-right: 30px;
+        }
+
+        @media only screen and (min-width:0px) and (max-width:320px)
+        {
+            body>div{
+                width: 400px;
+            height: 800px;
+            grid-template-columns: repeat(1,1fr);
+             grid-template-rows: repeat(10,1fr);
+            grid-template-areas:"n"
+                                "a"
+                                "a"
+                                "a"
+                                "b"
+                                "b"
+                                "c"
+                                "c"
+                                "d"
+                                "d"
+            }
+             #navigation{
+            font-size: 50px;
+            padding-top: 50px    
+            }
+            .box{
+            font-size: 20px;
+            padding-top: 30px;
+            color: #5a595a;
+        }
+        #a{
+            margin-right: 0px;
+            margin-top: 20px;
+        }
+       
+        }
+        @media only screen and (min-width:321px) and (max-width:720px)
+        {
+            body>div{
+                width: 900px;
+            height: 700px;
+                grid-template-columns: repeat(6,1fr);
+            grid-template-rows: repeat(7,1fr);
+            grid-template-areas: "n n n n n n"
+                                "a a a a a a"
+                                "a a a a a a"
+                                "a a a a a a"
+                                "a a a a a a"
+                                "b b c c d d"
+                                "b b c c d d"
+                            
+            }
+             #navigation{
+            font-size: 60px;
+            padding-top: 20px    
+            }
+            .box{
+            font-size: 30px;
+            padding-top: 30px;
+            color: #5a595a;
+        }
+        #a{
+           margin-right: 0px;
+        }
+        #b,#c{
+            margin-right: 20px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="navigation">Navigation</div>
+        <div id="a" class="box">LEFT BOX</div>
+        <div id="b" class="box">RIGHT BOX 1</div>
+        <div id="c" class="box">RIGHT BOX 2</div>
+        <div id="d" class="box">RIGHT BOX 3</div>
+    </div>
+</body>
+</html>

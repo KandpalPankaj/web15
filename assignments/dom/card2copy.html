@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 1000px;
+            height: 350px;
+            display: flex;
+            margin: auto;
+        }
+        #container>div{
+            width: 25% ;
+            height: 90%;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            margin: 15px;
+        }
+        img{
+            width: 100%;
+        }
+        #container>div>div{
+            display: flex;
+            width: 70%;
+            justify-content: space-between;
+            margin-top: -15px;
+        }
+        h3,p{
+            margin-left: 10px;
+            font-family: sans-serif;
+        }
+        p{
+            font-size: 14px;
+        }
+        #container>div>div>p{
+            text-decoration-line: line-through;
+            color: silver;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!-- <div>
+          <img src="https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi1.jpg.pagespeed.ic.mkSk-Af1ka.webp">
+          <p>LATEST MEN'S SNEAKER</p>
+          <div>
+              <h3>$25.00</h3>
+              <p>$35.00</p>
+          </div>
+        </div>
+        <div>
+            <img src="https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi2.jpg.pagespeed.ic.uBrpABaJqp.webp">
+            <p>LATEST MEN'S SNEAKER</p>
+            <div>
+                <h3>$25.00</h3>
+                <p>$35.00</p>
+            </div>
+        </div>
+        <div>
+                <img src="https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi3.jpg.pagespeed.ic.iO_cFEPy2K.webp">
+                <p>LATEST MEN'S SNEAKER</p>
+                <div>
+                    <h3>$25.00</h3>
+                    <p>$35.00</p>
+                </div>
+        </div>
+        <div>
+                <img src="https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi4.jpg.pagespeed.ic.kmiQW8I5wx.webp">
+                 <p>LATEST MEN'S SNEAKER</p>
+                <div>
+                     <h3>$25.00</h3>
+                     <p>$35.00</p>
+                 </div>
+        </div> -->
+    </div>
+</body>
+</html>
+
+<script>
+    var data = [
+    {
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi1.jpg.pagespeed.ic.mkSk-Af1ka.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$25.00",
+        strikedOffPrice:"$95.00"
+    },{
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi2.jpg.pagespeed.ic.uBrpABaJqp.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    },{
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi3.jpg.pagespeed.ic.iO_cFEPy2K.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    },
+    {
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi4.jpg.pagespeed.ic.kmiQW8I5wx.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    }]
+
+    data.map(function(el){
+        var box=document.createElement("div");
+        var image=document.createElement("img");
+         image.setAttribute("src",el.imgUrl);
+         var name=document.createElement("p");
+         name.textContent=el.name;
+         var price=document.createElement("div");
+        var head=document.createElement("h3");
+         head.textContent=el.price;
+         var strikedOffPrice=document.createElement("p");
+        strikedOffPrice.textContent=el.strikedOffPrice;
+    
+        price.append(head,strikedOffPrice);
+     box.append(image,name,price);
+     document.querySelector("#container").append(box);
+   
+
+    });
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Payment form</h2>
+    <h5>Name</h5>
+    <input type="text" placeholder="Enter Full Name" id="name">
+    <h5>Card Number</h5>
+    <input type="number" placeholder="Enter Card Number" id="num">
+    <h5>CVV</h5>
+    <input type="number" placeholder="CVV" id="cvv">
+    <h5>Expiry Date</h5>
+    <input type="text" placeholder="Expiry Date in MM/YY" id="date">
+    <button onclick="proceed()">Proceed</button>
+</body>
+</html><script>
+    function proceed(){
+        if(document.querySelector("#name").value==""||document.querySelector("#num").value==""||document.querySelector("#cvv").value=="" || document.querySelector("#date").value=="")
+        {
+            alert("Error")
+        }
+        else{
+            window.location.href="otp.html"
+        }
+    }
+</script>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 800px;
+            height: 500px;
+            display: flex;
+            margin: auto;
+            font-family: sans-serif;
+        }
+        #container>div{
+            height: 100%;
+            width: 30%;
+        }
+        #container>div+div{
+            width: 60%;
+            margin-left: 100px;
+        }
+        h2{
+            height: 40px;
+            color: #68A0B7;
+            border-bottom: 1px solid silver;
+        }
+        h2~div{
+            margin: 20px 0px 10px;
+        }
+        #button{
+            background-color: #3C72D4;
+            color: white;
+            padding: 5px 20px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            margin-top: 10px;
+        }
+    td{
+        padding: 10px 10px ;
+    }
+    th{
+        text-align: left;
+        padding-left: 10px;
+    }
+    td,
+      th {
+        border-bottom: 1px solid #DDDDDD;
+        text-align: left;
+        padding: 16px;
+      }
+    </style>
+</head>
+<body>
+    <form id="container">
+        <div>
+            <h2>Add Product</h2>
+            <div>Category</div>
+            <select id="category">
+                <option value="">-Select category-</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Furnitures">Furnitures</option>
+                <option value="Home Appliances">Home Appliances</option>
+                <option value="Books">Books</option>
+            </select>
+            <div>Title</div>
+            <input type="text" placeholder="Product Title" id="title">
+            <div>Description</div>
+            <textarea name="" id="info" cols="30" rows="10" placeholder="Product Description"></textarea>
+            <!-- <input type="text" placeholder="Product Description" id="info"> -->
+            <div>Price</div>
+            <input type="number" placeholder="Product Price" id="price">
+            <input type="submit" value="Add" id="button">
+        </div>
+        <div>
+            <h2>Product Info</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Category</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
+<script>
+document.querySelector("form").addEventListener("submit",add);
+var arr=JSON.parse(localStorage.getItem("product"))||[];
+createTable(arr);
+
+function add(event){
+    event.preventDefault();
+    var cat=document.querySelector("#category").value;
+    var title=document.querySelector("#title").value;
+    var des=document.querySelector("#info").value;
+    var price=document.querySelector("#price").value;
+    var tasklist={serial:arr.length+1,category:cat,title:title,description:des,price:price}
+    arr.push(tasklist);
+    localStorage.setItem("product",JSON.stringify(arr));
+  
+    createTable(arr);
+}
+function createTable(arr){
+    // document.querySelector("tbody").innerHTML="";
+        arr.map(function(el){
+            var tr1=document.createElement("tr")
+ var col1=document.createElement("td");
+ col1.textContent=el.serial;
+ var col2=document.createElement("td");
+ col2.textContent=el.category;
+ var col3=document.createElement("td");
+ col3.textContent=el.title;
+ var col4=document.createElement("td");
+ col4.textContent=el.description;
+ var col5=document.createElement("td");
+ col5.textContent=el.price;
+tr1.append(col1,col2,col3,col4,col5);
+ document.querySelector("tbody").append(tr1);
+        })
+}
+</script>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 1000px;
+            height: 350px;
+            display: flex;
+            margin: auto;
+        }
+        #container>div{
+            width: 25% ;
+            height: 90%;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            margin: 15px;
+        }
+        img{
+            width: 100%;
+        }
+        #container>div>div{
+            display: flex;
+            width: 70%;
+            justify-content: space-between;
+            margin-top: -15px;
+        }
+        h3,p{
+            margin-left: 10px;
+            font-family: sans-serif;
+        }
+        p{
+            font-size: 14px;
+        }
+        #container>div>div>p{
+            text-decoration-line: line-through;
+            color: silver;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!-- <div>
+          <img src="https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi1.jpg.pagespeed.ic.mkSk-Af1ka.webp">
+          <p>LATEST MEN'S SNEAKER</p>
+          <div>
+              <h3>$25.00</h3>
+              <p>$35.00</p>
+          </div>
+        </div>
+        <div>
+            <img src="https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi2.jpg.pagespeed.ic.uBrpABaJqp.webp">
+            <p>LATEST MEN'S SNEAKER</p>
+            <div>
+                <h3>$25.00</h3>
+                <p>$35.00</p>
+            </div>
+        </div>
+        <div>
+                <img src="https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi3.jpg.pagespeed.ic.iO_cFEPy2K.webp">
+                <p>LATEST MEN'S SNEAKER</p>
+                <div>
+                    <h3>$25.00</h3>
+                    <p>$35.00</p>
+                </div>
+        </div>
+        <div>
+                <img src="https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi4.jpg.pagespeed.ic.kmiQW8I5wx.webp">
+                 <p>LATEST MEN'S SNEAKER</p>
+                <div>
+                     <h3>$25.00</h3>
+                     <p>$35.00</p>
+                 </div>
+        </div> -->
+    </div>
+</body>
+</html>
+
+<script>
+    // var data = [
+    // {
+    //     imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi1.jpg.pagespeed.ic.mkSk-Af1ka.webp",
+    //     name:"LATEST MEN’S SNEAKER",
+    //     price:"$25.00",
+    //     strikedOffPrice:"$95.00"
+    // },{
+    //     imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi2.jpg.pagespeed.ic.uBrpABaJqp.webp",
+    //     name:"LATEST MEN’S SNEAKER",
+    //     price:"$35.00",
+    //     strikedOffPrice:"$100.00"
+    // },{
+    //     imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi3.jpg.pagespeed.ic.iO_cFEPy2K.webp",
+    //     name:"LATEST MEN’S SNEAKER",
+    //     price:"$35.00",
+    //     strikedOffPrice:"$100.00"
+    // },
+    // {
+    //     imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi4.jpg.pagespeed.ic.kmiQW8I5wx.webp",
+    //     name:"LATEST MEN’S SNEAKER",
+    //     price:"$35.00",
+    //     strikedOffPrice:"$100.00"
+    // }]
+
+
+
+
+    
+var box1=document.createElement("div");
+
+var image1=document.createElement("img");
+image1.setAttribute("src","https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi1.jpg.pagespeed.ic.mkSk-Af1ka.webp");
+
+var name1=document.createElement("p");
+name1.textContent="LATEST MEN'S SNEAKER";
+
+var price1=document.createElement("div");
+var head1=document.createElement("h3");
+head1.textContent="$25.00";
+
+var strikedOffPrice1=document.createElement("p");
+strikedOffPrice1.textContent="$35.00";
+
+price1.append(head1,strikedOffPrice1);
+
+box1.append(image1,name1,price1);
+
+var box2=document.createElement("div");
+
+var image2=document.createElement("img");
+image2.setAttribute("src","https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi2.jpg.pagespeed.ic.uBrpABaJqp.webp");
+
+var name2=document.createElement("p");
+name2.textContent="LATEST MEN'S SNEAKER";
+
+var price2=document.createElement("div");
+var head2=document.createElement("h3");
+head2.textContent="$25.00";
+
+var strikedOffPrice2=document.createElement("p");
+strikedOffPrice2.textContent="$35.00";
+
+price2.append(head2,strikedOffPrice2);
+
+box2.append(image2,name2,price2);
+
+var box3=document.createElement("div");
+
+var image3=document.createElement("img");
+image3.setAttribute("src","https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi3.jpg.pagespeed.ic.iO_cFEPy2K.webp");
+
+var name3=document.createElement("p");
+name3.textContent="LATEST MEN'S SNEAKER";
+
+var price3=document.createElement("div");
+var head3=document.createElement("h3");
+head3.textContent="$25.00";
+
+var strikedOffPrice3=document.createElement("p");
+strikedOffPrice3.textContent="$35.00";
+
+price3.append(head3,strikedOffPrice3);
+
+box3.append(image3,name3,price3);
+
+var box4=document.createElement("div");
+
+var image4=document.createElement("img");
+image4.setAttribute("src","https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi4.jpg.pagespeed.ic.kmiQW8I5wx.webp");
+
+var name4=document.createElement("p");
+name4.textContent="LATEST MEN'S SNEAKER";
+
+var price4=document.createElement("div");
+var head4=document.createElement("h3");
+head4.textContent="$25.00";
+
+var strikedOffPrice4=document.createElement("p");
+strikedOffPrice4.textContent="$35.00";
+
+price4.append(head4,strikedOffPrice4);
+
+box4.append(image4,name4,price4);
+
+document.querySelector("#container").append(box1,box2,box3,box4);
+
+
+
+</script>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 800px;
+            height: 500px;
+            display: flex;
+            margin: auto;
+            font-family: sans-serif;
+        }
+        #container>div{
+            height: 100%;
+            width: 30%;
+            
+        }
+        #container>div+div{
+            width: 60%;
+            margin-left: 100px;
+        }
+        h2{
+            height: 40px;
+            color: #68a0b7;
+            border-bottom: 1px solid silver;
+        }
+        h2~div{
+            margin: 20px 0px 10px;
+        }
+        button{
+            background-color: #3c72d4;
+            color: white;
+            padding: 5px 20px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            margin-top: 10px;
+        }
+    td{
+        padding: 10px 10px ;
+        
+    }
+    th{
+        text-align: left;
+        padding-left: 10px;
+    }
+   
+    
+
+    </style>
+</head>
+<body>
+    <form id="container">
+        <div>
+            <h2>Add Product</h2>
+            <div>Category</div>
+            <select>
+                <option value="">-Select category-</option>
+                <option value="">Electronics</option>
+                <option value="">Furnitures</option>
+                <option value="">Home Appliances</option>
+                <option value="">Books</option>
+            </select>
+            <div>Title</div>
+            <input type="text" placeholder="Product Title">
+            <div>Description</div>
+            <input type="text" placeholder="Product Description">
+            <div>Price</div>
+            <input type="number" placeholder="Product Price">
+            <br>
+            <button>Add</button>
+        </div>
+        <div>
+            <h2>Product Info</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Category</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>1</td>
+                        <td>Electronics</td>
+                        <td>macbook-pro</td>
+                        <td>some descr</td>
+                        <td>1000</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>2</td>
+                        <td>Furnitures</td>
+                        <td>sofa</td>
+                        <td>some sofa</td>
+                        <td>10003</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Home Appliances</td>
+                        <td>som new</td>
+                        <td>home</td>
+                        <td>456</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Home Appliances</td>
+                        <td>some new</td>
+                        <td>home</td>
+                        <td>456</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
+
+<script>
+
+    
+</script>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 800px;
+            height: 500px;
+            display: flex;
+            margin: auto;
+            font-family: sans-serif;
+        }
+        #container>div{
+            height: 100%;
+            width: 30%;
+            
+        }
+        #container>div+div{
+            width: 60%;
+            margin-left: 100px;
+        }
+        h2{
+            height: 40px;
+            color: #68a0b7;
+            border-bottom: 1px solid silver;
+        }
+        h2~div{
+            margin: 20px 0px 10px;
+        }
+        #button{
+            background-color: #3c72d4;
+            color: white;
+            padding: 5px 20px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            margin-top: 10px;
+        }
+    td{
+        padding: 10px 10px ;
+        
+    }
+    th{
+        text-align: left;
+        padding-left: 10px;
+    }
+   
+    
+
+    </style>
+</head>
+<body1>
+    <form id="container"></form>
+</body1>
+</html>
+
+
+<script>
+var box1=document.createElement("div");
+ var head1=document.createElement("h2")
+ head1.textContent="Add Product";
+ var cat =document.createElement("div");
+ cat.textContent="Category";
+ var sel=document.createElement("select");
+ var o1=document.createElement("option");
+ o1.textContent="-Select category-";
+ var o2=document.createElement("option");
+ o2.textContent="Electronics";
+ var o3=document.createElement("option");
+ o3.textContent="Furnitures";
+ var o4=document.createElement("option");
+ o4.textContent="Home Appliances";
+ var o5=document.createElement("option");
+ o5.textContent="Books";
+ var ti=document.createElement("div");
+ ti.textContent="Title";
+ var in1=document.createElement("input");
+ in1.setAttribute("type","text");
+ in1.setAttribute("placeholder","Product Title");
+ in1.setAttribute("id","title")
+ var des =document.createElement("div");
+ des.textContent="Description";
+ var in2=document.createElement("input");
+ in2.setAttribute("type","text");
+ in2.setAttribute("placeholder","Product Description");
+ var pr =document.createElement("div");
+ pr.textContent="Price";
+ var in3=document.createElement("input");
+ in3.setAttribute("type","number");
+ in3.setAttribute("placeholder","Product Price");
+ var btn=document.createElement("input");
+ btn.setAttribute("type","submit")
+ btn.setAttribute("value","Add");
+ btn.setAttribute("id","button");
+
+
+ sel.append(o1,o2,o3,o4,o5)
+box1.append(head1,cat,sel,ti,in1,des,in2,pr,in3,btn);
+document.querySelector("#container").append(box1);
+
+
+var box2=document.createElement("div");
+var head2=document.createElement("h2")
+ head2.textContent="Product Info";
+
+ var table=document.createElement("table");
+ var th=document.createElement("thead");
+
+ var tr=document.createElement("tr");
+ var th1=document.createElement("th");
+ th1.textContent="#";
+ var th2=document.createElement("th");
+ th2.textContent="Category";
+ var th3=document.createElement("th");
+ th3.textContent="Title";
+ var th4=document.createElement("th");
+ th4.textContent="Description";
+ var th5=document.createElement("th");
+ th5.textContent="Price";
+
+ var body1=document.createElement("tbody");
+ var tr1=document.createElement("tr")
+ var col1=document.createElement("td")
+ var col2=document.createElement("td")
+ var col3=document.createElement("td")
+ var col4=document.createElement("td")
+ var col5=document.createElement("td")
+
+ tr1.append(col1,col2,col3,col4,col5);
+ body1.append(tr1);
+ tr.append(th1,th2,th3,th4,th5)
+ th.append(tr)
+ table.append(th,body1);
+ box2.append(head2,table);
+document.querySelector("#container").append(box2);
+
+document.querySelector("form").addEventListener("submit",add);
+
+function add(event){
+    event.preventDefault();
+   col3.textcontent=document.querySelector("#title").value;
+}
+
+</script>

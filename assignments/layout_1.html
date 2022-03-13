@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout_1</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        body>div{
+            background-color: white;
+            width: 1200px;
+            height: 300px;
+            margin: auto;
+            margin-top: 130px;
+            padding: 20px;
+            font-family: sans-serif;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(12,1fr);
+            grid-template-rows: repeat(4,1fr);
+            grid-template-areas: "n n n n n n n n n n n n"
+                                "a a a b b b c c c d d d"
+                                "a a a b b b c c c d d d"
+                                "a a a b b b c c c d d d"
+        }
+        .box{
+            font-size: 30px;
+            padding: 10px;
+            color: #5a595a;
+        }
+        #navigation{
+            grid-area: n;
+            background-color: yellow;
+            font-size: 60px;
+            padding: 20px
+        }
+        #b{
+            grid-area: b;
+            background-color: #00ff2a;
+
+        }
+        #c{
+            grid-area: c;
+            background-color: #5763ee;
+        }
+        #d{
+            grid-area: d;
+            background-color: #989898;
+        }
+        #a{
+            grid-area: a;
+            background-color: red;
+        }
+
+        @media only screen and (min-width:0px) and (max-width:320px)
+        {
+            body>div{
+                width: 400px;
+            height: 600px;
+                grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(5,1fr);
+            grid-template-areas: "n n n"
+                                "a a a "
+                                "d d d"
+                                "b b b"
+                                "c c c"
+            }
+             #navigation{
+            font-size: 50px;
+            padding-top: 20px    
+            }
+            .box{
+            font-size: 20px;
+            padding-top: 10px;
+            color: #5a595a;
+        }
+        }
+        @media only screen and (min-width:321px) and (max-width:720px)
+        {
+            body>div{
+                width: 600px;
+            height: 600px;
+                grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(5,1fr);
+            grid-template-areas: "n n n n"
+                                "a a c c"
+                                "a a c c"
+                                "b b d d"
+                                "b b d d"
+                            
+            }
+             #navigation{
+            font-size: 60px;
+            padding-top: 50px    
+            }
+            .box{
+            font-size: 50px;
+            padding-top: 30px;
+            color: #5a595a;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="navigation">Navigation</div>
+        <div id="a" class="box">Box 1</div>
+        <div id="b" class="box">Box 2</div>
+        <div id="c" class="box">Box 3</div>
+        <div id="d" class="box">Box 4</div>
+    </div>
+</body>
+</html>

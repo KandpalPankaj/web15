@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e77001a753.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="https://www.pngitem.com/pimgs/m/81-813666_coschedule-logo-hd-png-download.png" type="image/x-icon">
+
+    <title>Document</title>
+    <style>
+         body {
+        width: 1350px;
+  height: 590px;
+  background-color: #FFF;
+  font-family: "MuseoSans-300",sans-serif;
+}
+    #navbar{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        background-color:#e6e6e6 ;
+        line-height: 50px;
+    }
+    #container1 div {
+  width: 25px;
+  height: 3px;
+  margin: 4px 0 4px 10px;
+  border-radius: 35%;
+  border: 1px solid;
+  background-color: black;
+} 
+#container1{
+    margin-top: 12px;
+}
+#company{
+    width: 16%;
+    height: 100%;
+    margin-left: 20px;
+}
+.head{
+    width: 9%;
+    height: 100%;
+    text-align: center;
+}
+.head:hover{
+    background-color: whitesmoke;
+}
+#setting{
+    background-color: white;
+}
+        #container{
+            display: grid;
+            width:100%;
+            grid-template-columns: 30% 70%;
+            
+        }
+       #set{
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+        padding: 50px 0 0 0;
+        text-align: center;
+        height: 950px;
+        width: 270px;
+        background-color: rgb(247,247,247);
+       }
+       p{
+           color:rgb(102,102,102)
+       }
+       #head3{
+           height:50px;
+           width:100px;
+           margin:auto;
+           background-color: rgb(230,230,230);
+           padding:1px 0 8px 0 ;
+           border-radius: 50px;
+       }
+       .box{
+           display: flex;
+           justify-content: space-between;
+       }
+       #cont{
+        margin:20px 50px 0 30px;
+       }
+       h1,h3{
+           color: rgb(161,112,102);
+       }
+       #icons{
+    display: flex;
+    margin-left: 400px;
+}
+#icons>div{
+    margin-right: 20px;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="container1">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="company">Masai</div>
+        <div id="compan" class="head">Company</div>
+        <div class="head" id="setting">Settings</div>
+        <div class="head" id="team">Team Members</div>
+        <div class="head" id="social">Social Profiles</div>
+        <div class="head" id="billing" >Billing</div>
+        <div id="icons">
+            <div><i class="fas fa-trophy"></i></div>
+            <div><i class="fas fa-question"></i></div>
+            <div><i class="fas fa-bell"></i></div></div>
+    </div>
+   <div id="container">
+    <div id="set">
+        <div id="head3"><h3>Settings</h3></div>
+        <p>Project Types</p>
+        <p>Integrations</p>
+        <p>My Integration</p>
+        <br>
+        <p>Power Ups</p>
+    </div>
+    <div id="cont">
+        <h1>Settings</h1>
+        <p>Customize your settings to suit your needs. Changes made here will be visible to all team members.</p>
+        <hr>
+        <div class="box">
+            <h3>Calender Name</h3>
+            <input type="text" placeholder="Marketing Calender"/>
+        </div>
+        <hr>
+        <div class="box">
+            <div> <h3>Timezone</h3></div>
+            <div>
+                <p>Asia/Calcutta</p>
+                <input type="button" value="Open Timezone Settings"/>
+            </div>
+        </div>
+        <hr>
+        <div class="box">
+            <h3>Date Format</h3>
+            <input type="date"/>
+        </div>
+        <hr>
+        <div class="box">
+            <h3>Show Tasks and Discussions in Projects </h3>
+         <select style="width:150px;height:50px">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+         </select>
+        </div>
+        <hr>
+        <div class="box">
+            <div><h3>Color label </h3></div>
+            <div>
+                <p><i class="fas fa-circle"></i> Color Label1</p>
+                <p><i class="fas fa-circle"></i> Color Label2</p>
+                <p><i class="fas fa-circle"></i> Color Label3</p>
+                <hr>
+                <i class="fas fa-circle"></i>
+                <p>Add a custom label      <input type="button" value="Add" style="width:50px; background-color: tomato;"/></p>
+            </div>
+            
+        </div>
+        <hr>
+        <div class="box">
+            <div >
+                <h3>Tags</h3>
+                <h4><input type="checkbox"/>Allow automatic tag creation</h4>
+                <p>This allows users to create new tags inside projects in addition to selecting tags that have already been created.</p>
+            </div>
+            <div>
+             <p>Customer Success</p>
+             <p>How To</p>
+             <p>Newsletter</p>
+             <p>Training</p>
+             <hr>
+             <p>Add a custom bag     <input type="button" value="Add" style="width:50px; background-color: tomato;"/></p>
+             
+            </div>
+        </div>
+        <hr>
+        <h3>Pause Social Messeges</h3>
+        <hr>
+        <p>Delete This Calender</p>
+    </div>
+   </div>
+</body>
+</html>
+<script>
+     document.querySelector("#billing").addEventListener("click",myfunction);
+
+function myfunction(){
+    window.location.href="billing1.html"
+}
+     document.querySelector("#compan").addEventListener("click",myfunction1);
+
+function myfunction1(){
+    window.location.href="company1.html"
+}
+document.querySelector("#setting").addEventListener("click",myfunction2);
+
+function myfunction2(){
+    window.location.href="setting.html"
+}
+document.querySelector("#team").addEventListener("click",myfunction3);
+
+function myfunction3(){
+    window.location.href="team.html"
+}
+document.querySelector("#social").addEventListener("click",myfunction4);
+
+function myfunction4(){
+    window.location.href="social.html"
+}
+</script>
