@@ -1,0 +1,36 @@
+#container{
+    border: 1px solid black;
+    width: 1300px;
+    height: 40px;
+    display: flex;
+    justify-content: right;
+    margin: auto;
+}
+#container>div{
+    margin:10px ;
+    font-weight: bold;
+}
+form{
+    margin: 50px auto;
+    border: 1px solid rgb(255, 255, 255);
+    width: 400px;
+    height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+button{
+    background-color: darkcyan;
+    border: 0px;
+    border-radius: 3px;
+    width: 190px;
+    height: 30px;
+    margin: 10px 0px 0px 105px;
+}
+input{
+    margin: 20px 0px 0px 95px;
+    width: 200px;
+    height: 20px;
+}
+h1{
+    margin: 10px 0px 0px 145px;
+
+}
